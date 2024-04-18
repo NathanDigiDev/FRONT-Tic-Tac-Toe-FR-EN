@@ -1,0 +1,95 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+  background: url(../img/bg.jpg) no-repeat center center/cover;
+  min-height: 100vh;
+  color: #f1f1f1;
+  padding: clamp(20px, 5vw, 50px) 10px 10px;
+}
+
+h1 {
+  font-family: Playfair Display SC, sans-serif;
+  font-size: 45px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1px;
+  max-width: 400px;
+  margin: 50px auto;
+  border: 1px solid #f1f1f1;
+  background: #f1f1f1;
+}
+
+.cell {
+  aspect-ratio: 1/1;
+  background: #14215c;
+  color: #f1f1f1;
+  cursor: pointer;
+  font-size: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info {
+  font-size: 30px;
+}
+
+.restart {
+  display: none;
+  background: rgb(20, 33, 92);
+  color: #f1f1f1;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 20px auto;
+}
+.restart:hover {
+  background: #f1f1f1;
+  color: #090f29;
+}
+
+.lang {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  font-size: large;
+  z-index: 3;
+}
+
+.lang a {
+  color: #f0f0f0;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .container {
+    max-width: 300px;
+  }
+
+  .info {
+    font-size: 20px;
+  }
+}
